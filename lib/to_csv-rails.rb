@@ -15,6 +15,10 @@ class Array
 
     return '' if columns.empty?
 
+    if options[:include]
+      columns += Array(options[:include]).map(&:to_sym)
+    end
+
     data = []
     # header
     if options[:header]
