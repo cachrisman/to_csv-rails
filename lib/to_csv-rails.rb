@@ -15,8 +15,8 @@ class Array
 
     return '' if columns.empty?
 
-    if options[:include]
-      columns += Array(options[:include]).map(&:to_sym)
+    if options[:include_methods]
+      columns += Array(options[:include_methods]).map(&:to_sym)
     end
 
     data = []
